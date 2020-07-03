@@ -1,0 +1,114 @@
+#banner{
+    width: 1200px;
+    height: 460px;
+    .boxcenter(0);
+    background: url(../img/banner.webp) center / 100%;
+
+    .content{
+        position: relative;
+        width: 234px;
+        height: 460px;
+        padding: 20px 0;
+        background:rgba(105,101,101,.6);
+        .banner-left{
+            box-sizing: content-box;
+            height: 420px;
+            color: #fff;
+            li{
+                padding-left: 30px;
+                height: 42px;
+                line-height: 42px;
+                cursor: pointer;
+                &:hover{
+                    background: #f60;
+                }
+
+                .list-right{
+                    margin-right: 20px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    float: right;
+                }
+            }
+            
+            &:hover + .list-content{
+                display: flex;
+            }
+        } 
+
+        .list-content{
+            display: none;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 234px;
+            width: 966px;
+            height: 460px;
+            background: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, .2);
+            ul{
+                width: 241.5px;
+                li{
+                    height: 76px;
+                    padding: 18px 20px;
+                    display: flex;
+                    align-items: center;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+
+        .banner-right{
+            position: absolute;
+            top: 0;
+            left: 234px;
+            width: 966px;
+            height: 460px;
+
+            .arrow-left, .arrow-right{
+                position: absolute;
+                top: 50%;
+                padding: 20px 5px;
+                color: #ccc;
+                font-size: 30px;
+                transform: translateY(-50%);
+                cursor: pointer;
+
+                &:hover{
+                    background: #333;
+                }
+            }
+
+            .arrow-right{
+                right: 0;
+            }
+
+            .dot{
+                position: absolute;
+                bottom: 20px;
+                right: 30px;
+                ul li{
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background: #333;
+                    border: 2px solid #666;
+                    cursor: pointer;
+                    &:nth-child(1){
+                        background: #aaa;
+                    }
+
+                    &:hover{
+                        background: #aaa;
+                    }
+                }
+            }
+        }
+    }
+
+}
